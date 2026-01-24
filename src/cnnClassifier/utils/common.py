@@ -5,7 +5,7 @@ import base64
 import yaml
 from pathlib import Path
 from typing import Any
-
+from src.cnnClassifier import logger
 from box.exceptions import BoxValueError
 from ensure import ensure_annotations
 from box import ConfigBox
@@ -30,6 +30,13 @@ def create_directories(path_to_directories: list, verbose=True):
         os.makedirs(path, exist_ok=True)
         if verbose:
             logger.info(f"created directory at {path}")
+
+@ensure_annotations
+def save_json(path: Path, data: dict):
+    with open(path, "w") as f:
+        json.dump(data, f, indent=4)
+
+    logger.info(f"json file saved at: {path}")
 
 
 @ensure_annotations
