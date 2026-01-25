@@ -1,21 +1,17 @@
-# Core web
+pip==23.2.1
+setuptools==68.2.2
+wheel==0.41.3
 Flask==2.3.3
 Flask-Cors==4.0.0
 gunicorn==21.2.0
-
-# ML / inference (Render compatible)
-tensorflow==2.20.0
+tensorflow-cpu==2.13.0
 opencv-python-headless==4.8.1.78
 numpy==1.24.3
 scipy==1.10.1
 joblib
 pillow==10.0.0
-
-# Utilities used by your code
 python-box==6.0.2
 pyyaml
 ensure==1.0.2
 tqdm
-
-# IMPORTANT: install your package
 -e .
