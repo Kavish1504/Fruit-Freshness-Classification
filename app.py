@@ -49,8 +49,9 @@ def health_check():
     """Health check endpoint for monitoring"""
     return jsonify({"status": "healthy", "service": "Fruit Freshness Classifier"}), 200
 
+clApp = ClientApp()
 if __name__ == "__main__":
-    clApp = ClientApp()
+    
     
     # Get port from environment variable (Render will set this)
     port = int(os.environ.get('PORT', 8080))

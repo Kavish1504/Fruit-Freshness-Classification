@@ -6,7 +6,7 @@ setup(
     author="Kavish1504",
     author_email="kavishg36@gmail.com",
     description="Fruit Freshness Classification",
-    packages=find_packages(where="src"),
     package_dir={"": "src"},
-    python_requires=">=3.8,<3.14",
+    packages=find_packages("src"),
+    python_requires=">=3.8,<3.11",
 )
