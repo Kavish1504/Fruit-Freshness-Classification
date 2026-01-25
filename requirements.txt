@@ -1,3 +1,4 @@
+# Existing Dependencies (All Kept)
 tensorflow
 dvc
 pandas
@@ -14,4 +15,12 @@ ensure==1.0.2
 types-pyYAML
 scipy
 Flask-Cors
+
+# NEW - Production Server (REQUIRED for Render)
+gunicorn==21.2.0
+
+# NEW - Image Processing (if not already covered by tensorflow)
+Pillow==10.0.0
+
+# Keep editable install
 -e .
