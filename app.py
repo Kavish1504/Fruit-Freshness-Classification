@@ -51,16 +51,13 @@ def health_check():
 
 clApp = ClientApp()
 if __name__ == "__main__":
+    # Hugging Face Spaces uses port 7860
+    port = int(os.environ.get('PORT', 7860))
     
-    
-    # Get port from environment variable (Render will set this)
-    port = int(os.environ.get('PORT', 8080))
-    
-    # Determine if in production
     debug_mode = os.environ.get('FLASK_ENV') != 'production'
     
     app.run(
         host='0.0.0.0', 
         port=port, 
-        debug=debug_mode  # False in production, True locally
+        debug=debug_mode
     )
